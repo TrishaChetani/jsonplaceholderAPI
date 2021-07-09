@@ -97,7 +97,7 @@ gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
 
 ````
 
-###  Continuous Integration Continuous Deployment
+###  ContinuousIntegration ContinuousDeployment
 
 - **Jenkinsfile written using groovy code, which enables the capability to run the automated test in CI-CD**
 
