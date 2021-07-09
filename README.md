@@ -8,7 +8,7 @@
         - [Dev Setup of environment](#setup)
         - [Running test cases](#RunningTestSpecs)
         - [Test Report](#TestReport)
-        - [Continuous Integration Continuous Deployment](#Continuous Integration Continuous Deployment)
+        - [ContinuousIntegration ContinuousDeployment](#ContinuousIntegration ContinuousDeployment)
         - [Folder structure](#FolderStructure)
       -[TestCases](#TestCases)
         - [AutomatedTestCases](#AutomatedTestCases)
