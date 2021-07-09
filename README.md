@@ -110,10 +110,12 @@ gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
 3. GET request for employee by Id
 4. DELETE request to delete employee record
 
-### PostManCollection
-1. PostMan collection is attached
+### POSTMANCollection
+1. POSTMAN collection is attached
 
 ### Bugs
 - API frequently goes down and it become challenging to develop this test cases(https://streamable.com/xr0aj3)
 - edge cases are not working
 
+### Suggestion how the could be in better shape
+- Currently it hard to run the test because of the frequent message by API stating "*too many requests*" and, request to API fails. In case API was capable to handle some tests done by me, it would have helped me uncover the deeper issue.  Currently, because of this blocker, it is hard to test. I saw many edge cases were not working while automating the test cases though I do not remember in specific since I had not made the notes.
