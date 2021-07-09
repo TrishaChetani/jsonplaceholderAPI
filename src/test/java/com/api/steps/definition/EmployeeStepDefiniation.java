@@ -64,7 +64,7 @@ public class EmployeeStepDefiniation {
         Response result = Serenity.sessionVariableCalled("response");
         String res = result.asString();
         assertThat(res, containsString("success"));
-        assertThat(res, containsString("successfully! deleted Records"));
+        assertThat(res, containsString("Successfully! Record has been deleted"));
     }
 
 

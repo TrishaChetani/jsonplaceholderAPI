@@ -106,8 +106,8 @@ gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
 
 ### Automated TestCases(Gerkin Definitions are in detail)
 1. POST request to create Employee record.
-2. GET request for all employee
-3. GET request for employee by Id
+2. GET request to view details of all employee
+3. GET request to view details employee by Id
 4. DELETE request to delete employee record
 
 ### POSTMANCollection
