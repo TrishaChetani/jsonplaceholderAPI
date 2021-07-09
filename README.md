@@ -5,9 +5,15 @@
 - [API Test](#APITest)
     - [Tech stacks](#tech-stacks)
     - [Setup](#setup)
-        - [Dev Setup mocha and chai supertest](#setup)
+        - [Dev Setup of environment](#setup)
         - [Running test cases](#RunningTestSpecs)
+        - [Test Report](#TestReport)
+        - [Continuous Integration & Continuous Deployment](#Continuous Integration & Continuous Deployment)
         - [Folder structure](#FolderStructure)
+      -[TestCases](#TestCases)
+        - [AutomatedTestCases](#AutomatedTestCases)
+        - [PostManCollection](#PostManCollection)
+        - [Bugs](#Bugs)
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # APITest
@@ -23,7 +29,7 @@ API test : DummyRestAPITest (http://dummy.restapiexample.com/)
 - [`cucumber`](https://cucumber.io/)
 - [`hamcrest`](http://hamcrest.org/JavaHamcrest/)
 
-## Setup tools
+## Setup 
 
 1. Java
 2. Gradle
@@ -34,16 +40,16 @@ API test : DummyRestAPITest (http://dummy.restapiexample.com/)
 * setup Gradle.
 * In Intellij(sync the project and finish the gradle build so that all dependency are loaded)
 
-# How to run the test
+### How to run the test
 
 ```
 gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
 ```
-# Test Report
+### Test Report
 
 - Automatic Cucumber Test Report is generated under Target folder post running the tests
 
-# FolderStructure
+### FolderStructure
 
 ````
 .
@@ -91,11 +97,23 @@ gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
 
 ````
 
-#  Continuous Integration & Continuous Deployment
+###  Continuous Integration & Continuous Deployment
 
 - **Jenkinsfile written using groovy code, which enables the capability to run the automated test in CI-CD**
 
-# Bugs
+
+## TestCases
+
+### Automated TestCases(Gerkin Definitions are in detail)
+1. POST request to create Employee record.
+2. GET request for all employee
+3. GET request for employee by Id
+4. DELETE request to delete employee record
+
+### PostManCollection
+1. PostMan collection is attached
+
+### Bugs
 - API frequently goes down and it become challenging to develop this test cases(https://streamable.com/xr0aj3)
 - edge cases are not working
 
