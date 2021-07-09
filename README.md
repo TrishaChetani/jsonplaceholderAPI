@@ -12,7 +12,7 @@
         - [Folder structure](#FolderStructure)
       -[TestCases](#TestCases)
         - [AutomatedTestCases](#AutomatedTestCases)
-        - [PostManCollection](#PostManCollection)
+        - [POSTMANCollection](#POSTMANCollection)
         - [Bugs](#Bugs)
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
