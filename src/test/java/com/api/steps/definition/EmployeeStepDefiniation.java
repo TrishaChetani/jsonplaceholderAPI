@@ -30,7 +30,7 @@ public class EmployeeStepDefiniation {
     }
 
 
-    @When("I request employee service to get employee detail")
+    @When("I request employee service to get employee detail by Id")
     public void getEmployeeById(DataTable prefs) {
         commonSteps.getEmployeeById(prefs.asMap(String.class, String.class));
         Response result = Serenity.sessionVariableCalled("response");
@@ -58,7 +58,7 @@ public class EmployeeStepDefiniation {
         result.then().assertThat().body("$", hasKey("message"));
     }
 
-    @When("I request employee service to remove employee detail")
+    @When("I request employee service to remove employee detail by Id")
     public void remove(DataTable prefs) {
         commonSteps.removeEmployee(prefs.asMap(String.class, String.class));
         Response result = Serenity.sessionVariableCalled("response");

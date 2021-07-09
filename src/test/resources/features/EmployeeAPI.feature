@@ -18,19 +18,22 @@ Feature: Employee API
       | 200  |
 
   Scenario Outline: GET request to view details employee by Id
-    When I request employee service to get employee detail
+    When I request employee service to get employee detail by Id
       | employeeId | <employeeId> |
     Then the service returns the status code <code>
     Examples:
       | employeeId | code |
       | 1          | 200  |
+      | 2          | 200  |
 
-  Scenario Outline: DELETE request to delete employee record
-    When I request employee service to remove employee detail
+
+  Scenario Outline: DELETE request to delete employee record by Id
+    When I request employee service to remove employee detail by Id
       | employeeId | <employeeId> |
     Then the service returns the status code <code>
     Examples:
       | employeeId | code |
       | 1          | 200  |
+      | 2          | 200  |
 
 
