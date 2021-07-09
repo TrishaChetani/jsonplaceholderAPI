@@ -23,21 +23,28 @@ API test : DummyRestAPITest (http://dummy.restapiexample.com/)
 - [`cucumber`](https://cucumber.io/)
 - [`hamcrest`](http://hamcrest.org/JavaHamcrest/)
 
-## Setup
+## Setup tools
+
 1. Java
 2. Gradle
 
-### Dev Setup nodejs and yarn
+### Dev Setup of environment
+
 * set up Java also set the environment variables.
 * setup Gradle.
 * In Intellij(sync the project and finish the gradle build so that all dependency are loaded)
 
-# RunningTestSpecs
+# How to run the test
+
 ```
 gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
 ```
+# Test Report
+
+- Automatic Cucumber Test Report is generated under Target folder post running the tests
 
 # FolderStructure
+
 ````
 .
 ├── Jenkinsfile
@@ -85,6 +92,7 @@ gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
 ````
 
 #  Continuous Integration & Continuous Deployment
+
 - **Jenkinsfile written using groovy code, which enables the capability to run the automated test in CI-CD**
 
 # Bugs
