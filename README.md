@@ -8,7 +8,7 @@
         - [Dev Setup of environment](#setup)
         - [Running test cases](#RunningTestSpecs)
         - [Test Report](#TestReport)
-        - [Continuous Integration & Continuous Deployment](#Continuous Integration & Continuous Deployment)
+        - [Continuous Integration Continuous Deployment](#Continuous Integration Continuous Deployment)
         - [Folder structure](#FolderStructure)
       -[TestCases](#TestCases)
         - [AutomatedTestCases](#AutomatedTestCases)
@@ -97,7 +97,7 @@ gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
 
 ````
 
-###  Continuous Integration & Continuous Deployment
+###  Continuous Integration Continuous Deployment
 
 - **Jenkinsfile written using groovy code, which enables the capability to run the automated test in CI-CD**
 
