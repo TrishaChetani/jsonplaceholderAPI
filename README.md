@@ -88,5 +88,6 @@ gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
 - **Jenkinsfile written using groovy code, which enables the capability to run the automated test in CI-CD**
 
 # Bugs
-- API frequently goes down.
+- API frequently goes down and it become challenging to develop this test cases(https://streamable.com/xr0aj3)
 - edge cases are not working
+
