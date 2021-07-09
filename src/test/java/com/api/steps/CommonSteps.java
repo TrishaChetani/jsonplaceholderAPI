@@ -33,15 +33,16 @@ public class CommonSteps {
      * @param bodyPrefs
      */
     @Step
-    public Response createEmployee(Map<String, String> bodyPrefs) {
+    public void createEmployee(Map<String, String> bodyPrefs) {
         new HashMap<>(bodyPrefs).entrySet().forEach(e -> {
             if (e.getValue() == null)
                 e.setValue("");
+            spec = rest().baseUri(defaultConfig.baseURI).headers("*", "*").body(new JSONObject(bodyPrefs)).contentType(ContentType.JSON).when().log().all();
+            Response response = servicesSupport.executeRequest(spec, "POST", defaultConfig.createEndPoint);
+            Serenity.setSessionVariable(SessionVariables.RESPONSE_SESSION_VARIABLE).to(response);
         });
-        spec = rest().baseUri(defaultConfig.baseURI).headers("*", "*").body(new JSONObject(bodyPrefs)).contentType(ContentType.JSON).when().log().all();
-        Response response = servicesSupport.executeRequest(spec, "POST", defaultConfig.createEndPoint);
-        Serenity.setSessionVariable(SessionVariables.RESPONSE_SESSION_VARIABLE).to(response);
-        return response;
+
+
     }
 
     /*
@@ -55,10 +56,10 @@ public class CommonSteps {
             if (e.getValue() == null)
                 e.setValue("");
             spec = rest().baseUri(defaultConfig.baseURI).headers("*", "*").contentType(ContentType.JSON).pathParam(e.getKey(), e.getValue()).when().log().all();
-
+            Response response = servicesSupport.executeRequest(spec, "GET", defaultConfig.viewDetailByIdEndPoint);
+            Serenity.setSessionVariable(SessionVariables.RESPONSE_SESSION_VARIABLE).to(response);
         });
-        Response response = servicesSupport.executeRequest(spec, "GET", defaultConfig.viewDetailByIdEndPoint);
-        Serenity.setSessionVariable(SessionVariables.RESPONSE_SESSION_VARIABLE).to(response);
+
     }
 
     /*
@@ -82,11 +83,10 @@ public class CommonSteps {
             if (e.getValue() == null)
                 e.setValue("");
             spec = rest().baseUri(defaultConfig.baseURI).headers("*", "*").contentType(ContentType.JSON).pathParam(e.getKey(), e.getValue()).when().log().all();
-
-
+            Response response = servicesSupport.executeRequest(spec, "DELETE", defaultConfig.deleteRecordEndpoint);
+            Serenity.setSessionVariable(SessionVariables.RESPONSE_SESSION_VARIABLE).to(response);
         });
-        Response response = servicesSupport.executeRequest(spec, "DELETE", defaultConfig.deleteRecordEndpoint);
-        Serenity.setSessionVariable(SessionVariables.RESPONSE_SESSION_VARIABLE).to(response);
+
     }
 
     /*
