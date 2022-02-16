@@ -10,7 +10,7 @@ def gitRepo = 'https://github.com/TrishaChetani/api-test.git'
 node(testNode) {
     properties([
             parameters([
-                    choice(name: 'base_url', defaultValue: "http://dummy.restapiexample.com/"),
+                    choice(name: 'base_url', defaultValue: "https://jsonplaceholder.typicode.com/"),
                     string(name: 'TESTS_BRANCH', defaultValue: 'master', description: 'Branch to pull from the Tests Repo'),
                     choice(name: 'propertiesFile', defaultValue: "dev.properties", description: 'Pass properties file', choices: ['dev.properties', 'sit.properties', 'uat.properties', 'prod.properties']),
 
@@ -27,7 +27,7 @@ node(testNode) {
 
         }
         stage('Pulling Automation Code') {
-            sh "git clone https://github.com/TrishaChetani/api-test.git"
+            sh "git clone https://github.com/TrishaChetani/jsonplaceholderAPI.git"
         }
 
         stage('Executing Test Scenarios') {

@@ -18,7 +18,7 @@
 
 # APITest
 
-API test : DummyRestAPITest (http://dummy.restapiexample.com/)
+API test : DummyRestAPITest (https://jsonplaceholder.typicode.com/)
 - Check the basic functionality of API.
 - API are not working with different edge cases, hence bugs are there
 
@@ -43,7 +43,7 @@ API test : DummyRestAPITest (http://dummy.restapiexample.com/)
 ### How to run the test
 
 ```
-gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
+gradle clean test -DbaseURI="https://jsonplaceholder.typicode.com" --stacktrace
 ```
 ### Test Report
 
@@ -105,10 +105,10 @@ gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
 ## TestCases
 
 ### Automated TestCases(Gerkin Definitions are in detail)
-1. POST request to create Employee record.
-2. GET request to view details of all employee
-3. GET request to view details employee by Id
-4. DELETE request to delete employee record
+1. POST request to create post record.
+2. GET request to view details of all post
+3. GET request to view details post by Id
+4. DELETE request to delete post record by Id
 
 ### POSTMANCollection
 1. POSTMAN collection is attached

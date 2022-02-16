@@ -93,9 +93,9 @@ public class CommonSteps {
      * Verify status code
      */
     @Step
-    public void verifyResponseCode() {
+    public void verifyResponseCode(Integer code) {
         Response result = Serenity.sessionVariableCalled("response");
-        assertThat("Status code matching", result.getStatusCode(), equalTo(200));
+        assertThat("Status code matching", result.getStatusCode(), equalTo(code));
     }
 
 
